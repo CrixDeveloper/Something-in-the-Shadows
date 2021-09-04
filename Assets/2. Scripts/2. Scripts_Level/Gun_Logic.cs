@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// 3° MainLevel Script: Is in charge of the management and behaviour of the guns of the player. 
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

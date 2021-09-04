@@ -1,7 +1,6 @@
 ﻿// 4° MainLevel Script: Is in charge of the management of the enemy behaviour. 
 
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Target_Logic : MonoBehaviour
 {
