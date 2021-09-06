@@ -1,7 +1,6 @@
 ﻿// 5° MainLevel Script: Is in charge of the management of the countdown game object. 
 
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 

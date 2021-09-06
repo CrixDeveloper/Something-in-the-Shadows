@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Shootable
   - Enemy
+  - PickUpLight
+  - PickUpPistol
   layers:
   - Default
   - TransparentFX

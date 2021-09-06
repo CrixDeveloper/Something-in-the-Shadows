@@ -16,7 +16,7 @@ public class GameManager_Logic : MonoBehaviour
         if (gameHasEnded == false)
         {
             gameHasEnded = true;
-            SceneManager.LoadScene("FPS-GameOver");
+            SceneManager.LoadScene("GameOver");
             Invoke("RestartGame", restartDelay);
         }
     }
