@@ -8,7 +8,7 @@ public class CountDown_Logic : MonoBehaviour
 {
     #region Variables to use: 
     public GameObject textDisplay;
-    public int secondsLeft = 90;
+    public static int secondsLeft = 360;
     public bool takingAway = false;
     #endregion
 

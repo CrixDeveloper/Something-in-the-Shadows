@@ -6,12 +6,15 @@ public class Target_Logic : MonoBehaviour
 {
     #region Variables to use:
     [Header("Target Attributes:")]
+
     public float health = 50f;
+    public static int damage = 25;
     public GameObject destructionEffect;
 
     [Header("Audio References:")]
     protected AudioSource audioSource;
     public AudioClip targetSound;
+
     #endregion
 
     #region Methods to use: 
@@ -28,6 +31,10 @@ public class Target_Logic : MonoBehaviour
         {
             Die();
         }
+    }
+    public static void MakeDamage()
+    {
+        PlayerLife_Logic.playerLife += damage;
     }
     private void Die()
     {

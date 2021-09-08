@@ -6,33 +6,32 @@ using UnityEngine;
 public class Instantiator_Logic : MonoBehaviour
 {
     #region Variables to use: 
-    public GameObject enemy;
+    public GameObject electroEscapePanel;
     public int xPos;
     public int zPos;
-    public int enemyCount;
+    public int electroPanelCount;
     #endregion
 
     #region Methods to use:
-    // Start is called before the first frame update
     private void Start()
     {
-        StartCoroutine(EnemyDrop());
         
     }
     private void Update()
     {
-        
-    }
-
-    private IEnumerator EnemyDrop()
-    {
-        while (enemyCount < 10)
+        if (CountDown_Logic.secondsLeft == 90)
         {
-            xPos = Random.Range(-10, 10);
-            zPos = Random.Range(-20, -35);
-            Instantiate(enemy, new Vector3(xPos, 3, zPos), Quaternion.identity);
-            yield return new WaitForSeconds(0.1f);
-            enemyCount += 1;
+            ElectroPanelDrop();
+        }
+    }
+    private void ElectroPanelDrop()
+    {
+        if (electroPanelCount == 1)
+        {
+            xPos = Random.Range(-15, 15);
+            zPos = Random.Range(-15, -40);
+            Instantiate(electroEscapePanel, new Vector3(xPos, 3, zPos), Quaternion.identity);
+            electroPanelCount = 0;
         }
     }
     #endregion
