@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 48520585}
   - component: {fileID: 48520587}
   - component: {fileID: 48520586}
+  - component: {fileID: 48520588}
   m_Layer: 5
   m_Name: Panel_Background
   m_TagString: Untagged
@@ -278,6 +279,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48520584}
   m_CullTransparentMesh: 0
+--- !u!95 &48520588
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48520584}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8fd7370fa6230de46b884137b4f72017, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &927745250
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,8 +591,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 177.1}
-  m_SizeDelta: {x: 1024, y: 415.86963}
+  m_AnchoredPosition: {x: 0, y: 165.4}
+  m_SizeDelta: {x: 1024, y: 437.16315}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1785995231
 MonoBehaviour:
@@ -645,8 +665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000011444092, y: 24}
-  m_SizeDelta: {x: 916.39526, y: 274.31775}
+  m_AnchoredPosition: {x: 0, y: -16}
+  m_SizeDelta: {x: 1024, y: 233.65524}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2059392302
 MonoBehaviour:
@@ -669,12 +689,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d7c5435c2ff034b4da6f334fc48d9019, type: 3}
-    m_FontSize: 300
+    m_FontSize: 200
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1

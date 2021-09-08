@@ -8678,7 +8678,7 @@ MonoBehaviour:
   - {fileID: 1796203949}
   - {fileID: 1269168095}
   - {fileID: 431182690}
-  timeBetweenWaves: 15
+  timeBetweenWaves: 10
 --- !u!4 &1576216080
 Transform:
   m_ObjectHideFlags: 0

@@ -70,7 +70,6 @@ public class PlayerLife_Logic : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Target_Logic.MakeDamage();
-            Destroy(enemyRef);
         }
     }
     #endregion
