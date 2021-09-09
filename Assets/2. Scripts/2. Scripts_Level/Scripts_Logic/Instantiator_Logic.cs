@@ -6,32 +6,35 @@ using UnityEngine;
 public class Instantiator_Logic : MonoBehaviour
 {
     #region Variables to use: 
-    public GameObject electroEscapePanel;
+    public GameObject electroPanel;
     public int xPos;
     public int zPos;
-    public int electroPanelCount;
+    public static bool panelSpawned = false;
     #endregion
 
-    #region Methods to use:
-    private void Start()
-    {
-        
-    }
+    #region Frames Methods:
     private void Update()
     {
         if (CountDown_Logic.secondsLeft == 90)
         {
-            ElectroPanelDrop();
+            SpawnElectroPanel();
         }
     }
-    private void ElectroPanelDrop()
+
+    private void SpawnElectroPanel()
     {
-        if (electroPanelCount == 1)
+        if (panelSpawned == false)
         {
-            xPos = Random.Range(-15, 15);
-            zPos = Random.Range(-15, -40);
-            Instantiate(electroEscapePanel, new Vector3(xPos, 3, zPos), Quaternion.identity);
-            electroPanelCount = 0;
+            xPos = Random.Range(-19, 9);
+            zPos = Random.Range(-20, -35);
+            Instantiate(electroPanel, new Vector3(xPos, 2, zPos), Quaternion.identity);
+            panelSpawned = true;
+        }else
+        {
+            if (panelSpawned == true)
+            {
+                return;
+            }
         }
     }
     #endregion

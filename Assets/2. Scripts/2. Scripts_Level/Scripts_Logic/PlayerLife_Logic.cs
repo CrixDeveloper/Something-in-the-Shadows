@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerLife_Logic : MonoBehaviour
 {
@@ -70,6 +71,12 @@ public class PlayerLife_Logic : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Target_Logic.MakeDamage();
+        }else
+        {
+            if (collision.gameObject.CompareTag("Finish"))
+            {
+                SceneManager.LoadScene("Escape");
+            }
         }
     }
     #endregion
