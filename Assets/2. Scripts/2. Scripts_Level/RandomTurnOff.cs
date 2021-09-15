@@ -11,7 +11,7 @@ public class RandomTurnOff : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CountDown_Logic.secondsLeft == Random.Range(0, 180))
+        if (CountDown_Logic.secondsLeft == Random.Range(0, 200))
         {
             flashLightOff.SetActive(false);
         }

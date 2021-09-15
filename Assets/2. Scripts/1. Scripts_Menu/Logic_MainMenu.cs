@@ -37,5 +37,13 @@ public class Logic_MainMenu : MonoBehaviour
         Debug.Log("Closing Game...");
         Application.Quit();
     }
+    public void GameRules()
+    {
+        SceneManager.LoadScene("GameRules");
+    }
+    public void Back()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     #endregion
 }

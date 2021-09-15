@@ -27,7 +27,7 @@ public class Instantiator_Logic : MonoBehaviour
         {
             xPos = Random.Range(-19, 9);
             zPos = Random.Range(-20, -35);
-            Instantiate(electroPanel, new Vector3(xPos, 2, zPos), Quaternion.identity);
+            Instantiate(electroPanel, new Vector3(xPos, 3, zPos), Quaternion.identity);
             panelSpawned = true;
         }else
         {

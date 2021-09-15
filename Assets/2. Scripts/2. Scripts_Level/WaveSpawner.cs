@@ -2,6 +2,7 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.AI;
 
 public class WaveSpawner : MonoBehaviour {
 
@@ -40,11 +41,16 @@ public class WaveSpawner : MonoBehaviour {
 	{
 		get { return state; }
 	}
+	protected AudioSource audioSource;
+	public AudioClip scaryLaugh;
+	public NavMeshAgent enemyNavRef;
     #endregion
 
     #region Frames Methods:
     void Start()
 	{
+		audioSource = GetComponent<AudioSource>();
+
 		if (spawnPoints.Length == 0)
 		{
 			Debug.LogError("No spawn points referenced.");
@@ -116,6 +122,8 @@ public class WaveSpawner : MonoBehaviour {
 
 	IEnumerator SpawnWave(Wave _wave)
 	{
+		audioSource.PlayOneShot(scaryLaugh);
+
 		Debug.Log("Spawning Wave: " + _wave.name);
 		state = SpawnState.SPAWNING;
 
