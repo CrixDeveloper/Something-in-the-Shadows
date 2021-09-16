@@ -6,7 +6,6 @@ public class Target_Logic : MonoBehaviour
 {
     #region Variables to use:
     [Header("Target Attributes:")]
-
     public float health = 10f;
     public GameObject destructionEffect;
     #endregion
@@ -22,7 +21,6 @@ public class Target_Logic : MonoBehaviour
     }
     private void Die()
     {
-        FindObjectOfType<WaveSpawner>().audioSource.Pause();
         Instantiate(destructionEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }

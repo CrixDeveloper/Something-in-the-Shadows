@@ -2162,11 +2162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba1c9fd0cbe8b243ae08d6642ffe448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  funcionDeOnda: 0
+  funcionDeOnda: 4
   comienzo: 0
   amplitud: 2
   fase: 0
-  frecuencia: 0.5
+  frecuencia: 0.175
 --- !u!108 &312677272
 Light:
   m_ObjectHideFlags: 0
@@ -2179,8 +2179,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 4
-  m_Range: 15
+  m_Intensity: 5
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -8833,14 +8833,6 @@ MonoBehaviour:
     enemy: {fileID: 4333383392085897806, guid: 3e814ba2eb1303442beb714875d73d2e, type: 3}
     count: 1
     rate: 1
-  - name: Ninth Wave
-    enemy: {fileID: 4333383392085897806, guid: 3e814ba2eb1303442beb714875d73d2e, type: 3}
-    count: 1
-    rate: 1
-  - name: Tenth Wave
-    enemy: {fileID: 4333383392085897806, guid: 3e814ba2eb1303442beb714875d73d2e, type: 3}
-    count: 1
-    rate: 1
   spawnPoints:
   - {fileID: 307658040}
   - {fileID: 2007054702}
@@ -8863,7 +8855,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576216078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6.6, y: 2.82, z: -20.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

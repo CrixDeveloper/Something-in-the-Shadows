@@ -42,14 +42,16 @@ public class WaveSpawner : MonoBehaviour {
 	{
 		get { return state; }
 	}
+
+	private float reduceFactor = 2f;
 	public AudioSource audioSource;
 	public AudioClip scaryLaugh;
-	private float reduceFactor = 2f;
     #endregion
 
     #region Frames Methods:
     void Start()
 	{
+		PlayerLife_Logic.playerLife = 0;
 		audioSource = GetComponent<AudioSource>();
 
 		if (spawnPoints.Length == 0)
@@ -110,10 +112,15 @@ public class WaveSpawner : MonoBehaviour {
 
 	bool EnemyIsAlive()
 	{
-		audioSource.Play();
-		PlayerLife_Logic.playerLife += Time.deltaTime / reduceFactor;
-		FindObjectOfType<PlayerLife_Logic>().lifeText.GetComponent<Text>().text = "Scare Meter = " + PlayerLife_Logic.playerLife.ToString("F0");
-
+		if (PlayerLife_Logic.playerLife < 99)
+        {
+			PlayerLife_Logic.playerLife += Time.deltaTime / reduceFactor;
+			FindObjectOfType<PlayerLife_Logic>().lifeText.GetComponent<Text>().text = "Scare Meter = " + PlayerLife_Logic.playerLife.ToString("F0");
+		}else
+        {
+			SceneManager.LoadScene("GameOver");
+        }
+		
 		searchCountdown -= Time.deltaTime;
 		if (searchCountdown <= 0f)
 		{
