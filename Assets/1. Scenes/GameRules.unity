@@ -377,8 +377,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12.4, y: 76}
-  m_SizeDelta: {x: 791.40784, y: 550.4182}
+  m_AnchoredPosition: {x: -9.9, y: -0.95236}
+  m_SizeDelta: {x: 786.46216, y: 704.323}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &342396201
 MonoBehaviour:
@@ -401,7 +401,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d7c5435c2ff034b4da6f334fc48d9019, type: 3}
-    m_FontSize: 42
+    m_FontSize: 41
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -413,12 +413,11 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Welcome to Something in the Shadows microgame.\n\nThe goal of the game
-    is to escape the entire room before \nyou die. You will have 6 minutes to find
-    the generator \nthat allows you to escape. Check all the doors in the \nroom
-    and see what you can find, maybe you can get some\nuseful tools to acomplish
-    your goal. \n\nControls: \nMovement = w,s,a,d\nJump = space  bar\nLights ON =
-    x\nRun = Left Shift\nCrouch and shoot = Left ctrl\nInteract = Just hit the object\n\nGood
-    Luck!\n"
+    is to escape the entire room before you die.\nYou will have 6 minutes to find
+    and shoot the clowns. \nIf you complete all the waves you will be able to escape.\nYou
+    must complete the waves before the time runs out \nor before you get too scared.\n\nControls:
+    \nMovement = w,s,a,d\nJump = space bar\nLights ON = x\nRun = Left Shift\nCrouch
+    and shoot = Left ctrl\nInteract = Just hit the object\n\nGood Luck!\n"
 --- !u!222 &342396202
 CanvasRenderer:
   m_ObjectHideFlags: 0

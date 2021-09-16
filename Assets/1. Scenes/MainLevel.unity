@@ -2166,7 +2166,7 @@ MonoBehaviour:
   comienzo: 0
   amplitud: 2
   fase: 0
-  frecuencia: 0.1
+  frecuencia: 0.5
 --- !u!108 &312677272
 Light:
   m_ObjectHideFlags: 0
@@ -8818,6 +8818,26 @@ MonoBehaviour:
     count: 1
     rate: 1
   - name: Fifth Wave
+    enemy: {fileID: 4333383392085897806, guid: 3e814ba2eb1303442beb714875d73d2e, type: 3}
+    count: 1
+    rate: 1
+  - name: Sixth Wave
+    enemy: {fileID: 4333383392085897806, guid: 3e814ba2eb1303442beb714875d73d2e, type: 3}
+    count: 1
+    rate: 1
+  - name: Seventh Wave
+    enemy: {fileID: 4333383392085897806, guid: 3e814ba2eb1303442beb714875d73d2e, type: 3}
+    count: 1
+    rate: 1
+  - name: Eighth Wave
+    enemy: {fileID: 4333383392085897806, guid: 3e814ba2eb1303442beb714875d73d2e, type: 3}
+    count: 1
+    rate: 1
+  - name: Ninth Wave
+    enemy: {fileID: 4333383392085897806, guid: 3e814ba2eb1303442beb714875d73d2e, type: 3}
+    count: 1
+    rate: 1
+  - name: Tenth Wave
     enemy: {fileID: 4333383392085897806, guid: 3e814ba2eb1303442beb714875d73d2e, type: 3}
     count: 1
     rate: 1

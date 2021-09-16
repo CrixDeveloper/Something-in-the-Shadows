@@ -13,14 +13,14 @@ public class GameManager_Logic : MonoBehaviour
     #region Methods to use:
     public void GameOver()
     {
-        if (gameHasEnded == false && PlayerLife_Logic.playerLife == 100)
+        if (gameHasEnded == false && CountDown_Logic.secondsLeft == 0)
         {
             gameHasEnded = true;
             SceneManager.LoadScene("GameOver");
             Invoke("RestartGame", restartDelay);
         }
     }
-    public void RestartGame()
+    public static void RestartGame()
     {
         SceneManager.LoadScene("MainMenu");
     }
