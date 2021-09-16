@@ -2,7 +2,8 @@
 
 using UnityEngine;
 using System.Collections;
-using UnityEngine.AI;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour {
 
@@ -41,9 +42,9 @@ public class WaveSpawner : MonoBehaviour {
 	{
 		get { return state; }
 	}
-	protected AudioSource audioSource;
+	public AudioSource audioSource;
 	public AudioClip scaryLaugh;
-	public NavMeshAgent enemyNavRef;
+	private float reduceFactor = 2f;
     #endregion
 
     #region Frames Methods:
@@ -98,7 +99,8 @@ public class WaveSpawner : MonoBehaviour {
 		if (nextWave + 1 > waves.Length - 1)
 		{
 			nextWave = 0;
-			Debug.Log("ALL WAVES COMPLETE! Looping...");
+			SceneManager.LoadScene("Escape");
+			Debug.Log("ALL WAVES COMPLETE! You Win!");
 		}
 		else
 		{
@@ -108,12 +110,17 @@ public class WaveSpawner : MonoBehaviour {
 
 	bool EnemyIsAlive()
 	{
+		audioSource.Play();
+		PlayerLife_Logic.playerLife += Time.deltaTime / reduceFactor;
+		FindObjectOfType<PlayerLife_Logic>().lifeText.GetComponent<Text>().text = "Scare Meter = " + PlayerLife_Logic.playerLife.ToString("F0");
+
 		searchCountdown -= Time.deltaTime;
 		if (searchCountdown <= 0f)
 		{
 			searchCountdown = 1f;
 			if (GameObject.FindGameObjectWithTag("Enemy") == null)
 			{
+				audioSource.Stop();
 				return false;
 			}
 		}
@@ -122,8 +129,6 @@ public class WaveSpawner : MonoBehaviour {
 
 	IEnumerator SpawnWave(Wave _wave)
 	{
-		audioSource.PlayOneShot(scaryLaugh);
-
 		Debug.Log("Spawning Wave: " + _wave.name);
 		state = SpawnState.SPAWNING;
 
@@ -140,6 +145,7 @@ public class WaveSpawner : MonoBehaviour {
 
 	void SpawnEnemy(Transform _enemy)
 	{
+		audioSource.PlayOneShot(scaryLaugh);
 		Debug.Log("Spawning Enemy: " + _enemy.name);
 
 		Transform _sp = spawnPoints[ Random.Range (0, spawnPoints.Length) ];

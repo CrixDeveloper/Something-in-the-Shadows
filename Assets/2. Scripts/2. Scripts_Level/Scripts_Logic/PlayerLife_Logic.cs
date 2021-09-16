@@ -2,53 +2,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class PlayerLife_Logic : MonoBehaviour
 {
     #region Variables to use: 
-
     [Header("Player Attributes:")]
 
     public GameObject enemyRef;
     public Text lifeText;
-    public static int playerLife;
-
+    public static float playerLife;
     #endregion
 
     #region Frames Methods:
     // Start is called before the first frame update
     void Start()
     {
-        playerLife = 0;
+        playerLife = 0f;
         lifeText.GetComponent<Text>().text = "Scare Meter = " + playerLife;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerLife == 0)
+        if (playerLife == 0f)
         {
             lifeText.GetComponent<Text>().color = Color.white;
             lifeText.GetComponent<Text>().text = "Scare Meter = " + playerLife;
         }
         else
         {
-            if (playerLife == 25)
+            if (playerLife == 25f)
             {
                 lifeText.GetComponent<Text>().color = Color.green;
                 lifeText.GetComponent<Text>().text = "Scare Meter = " + playerLife;
             }
             else
             {
-                if (playerLife == 50)
+                if (playerLife == 50f)
                 {
                     lifeText.GetComponent<Text>().color = Color.yellow;
                     lifeText.GetComponent<Text>().text = "Scare Meter = " + playerLife;
                 }
                 else
                 {
-                    if (playerLife == 75)
+                    if (playerLife == 75f)
                     {
                         lifeText.GetComponent<Text>().color = Color.red;
                         lifeText.GetComponent<Text>().text = "Scare Meter = " + playerLife;
@@ -57,26 +54,10 @@ public class PlayerLife_Logic : MonoBehaviour
             }
         }
        
-        if (playerLife == 100)
+        if (playerLife == 100f)
         {
             Time.timeScale = 0;
             FindObjectOfType<GameManager_Logic>().GameOver();
-        }
-    }
-    #endregion
-
-    #region Methods to use: 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Target_Logic.MakeDamage();
-        }else
-        {
-            if (collision.gameObject.CompareTag("Finish"))
-            {
-                SceneManager.LoadScene("Escape");
-            }
         }
     }
     #endregion

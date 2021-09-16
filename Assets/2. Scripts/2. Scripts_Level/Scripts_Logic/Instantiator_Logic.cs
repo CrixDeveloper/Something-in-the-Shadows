@@ -15,10 +15,7 @@ public class Instantiator_Logic : MonoBehaviour
     #region Frames Methods:
     private void Update()
     {
-        if (CountDown_Logic.secondsLeft == 90)
-        {
-            SpawnElectroPanel();
-        }
+        
     }
 
     private void SpawnElectroPanel()

@@ -7,13 +7,13 @@ public class GameManager_Logic : MonoBehaviour
 {
     #region Variables to use:
     private bool gameHasEnded = false;
-    public float restartDelay = 1f;
+    public float restartDelay = 10f;
     #endregion
 
     #region Methods to use:
     public void GameOver()
     {
-        if (gameHasEnded == false)
+        if (gameHasEnded == false && PlayerLife_Logic.playerLife == 100)
         {
             gameHasEnded = true;
             SceneManager.LoadScene("GameOver");
@@ -22,7 +22,7 @@ public class GameManager_Logic : MonoBehaviour
     }
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("MainMenu");
     }
     #endregion
 }
