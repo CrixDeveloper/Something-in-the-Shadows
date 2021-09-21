@@ -180,6 +180,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.4510655
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4f289f5dfeab2a4e95f745560cfe1da, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
 --- !u!1 &17008926 stripped
@@ -454,6 +458,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.4510657
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4f289f5dfeab2a4e95f745560cfe1da, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
 --- !u!4 &35728904 stripped
@@ -1861,6 +1869,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.4510657
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4f289f5dfeab2a4e95f745560cfe1da, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
 --- !u!4 &290901955 stripped
@@ -3153,6 +3165,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.4510657
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4f289f5dfeab2a4e95f745560cfe1da, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
 --- !u!4 &485890612 stripped
@@ -8477,6 +8493,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.4510657
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4f289f5dfeab2a4e95f745560cfe1da, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
 --- !u!4 &1560805941 stripped
@@ -8844,9 +8864,7 @@ MonoBehaviour:
   - {fileID: 1512569145}
   - {fileID: 764266630}
   - {fileID: 506782260}
-  timeBetweenWaves: 15
-  audioSource: {fileID: 1576216082}
-  scaryLaugh: {fileID: 8300000, guid: 42ad38902dd0adb47ae0d4a64fdbbd87, type: 3}
+  timeBetweenWaves: 10
 --- !u!4 &1576216080
 Transform:
   m_ObjectHideFlags: 0
@@ -8871,15 +8889,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7fe0f893c8eecc549b7336e4fdc00105, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 200
   DopplerLevel: 5
   MinDistance: 1
   MaxDistance: 500
@@ -8917,7 +8935,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -9571,6 +9589,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.4510657
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4f289f5dfeab2a4e95f745560cfe1da, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec89eaad22bce364eabcdae8f401ca41, type: 3}
 --- !u!4 &1750094474 stripped

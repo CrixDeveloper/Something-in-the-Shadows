@@ -43,16 +43,13 @@ public class WaveSpawner : MonoBehaviour {
 		get { return state; }
 	}
 
-	private float reduceFactor = 2f;
-	public AudioSource audioSource;
-	public AudioClip scaryLaugh;
-    #endregion
+	private float reduceFactor = 1.2f;
+	#endregion
 
-    #region Frames Methods:
-    void Start()
+	#region Frames Methods:
+	void Start()
 	{
 		PlayerLife_Logic.playerLife = 0;
-		audioSource = GetComponent<AudioSource>();
 
 		if (spawnPoints.Length == 0)
 		{
@@ -127,7 +124,6 @@ public class WaveSpawner : MonoBehaviour {
 			searchCountdown = 1f;
 			if (GameObject.FindGameObjectWithTag("Enemy") == null)
 			{
-				audioSource.Stop();
 				return false;
 			}
 		}
@@ -152,7 +148,6 @@ public class WaveSpawner : MonoBehaviour {
 
 	void SpawnEnemy(Transform _enemy)
 	{
-		audioSource.PlayOneShot(scaryLaugh);
 		Debug.Log("Spawning Enemy: " + _enemy.name);
 
 		Transform _sp = spawnPoints[ Random.Range (0, spawnPoints.Length) ];

@@ -52,10 +52,10 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 3
+  Priority: 20
+  DopplerLevel: 5
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 1500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -105,7 +105,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.1388889
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -158,7 +158,8 @@ MonoBehaviour:
   health: 10
   destructionEffect: {fileID: 2599162818208407506, guid: 5370a861248a22c478939c82cf58cf4e,
     type: 3}
-  cheatStatic: {fileID: 8300000, guid: 42ad38902dd0adb47ae0d4a64fdbbd87, type: 3}
+  audioSource: {fileID: 3272476727639218849}
+  scaryLaugh: {fileID: 8300000, guid: c669179d611f1514c9aabade01289dd6, type: 3}
 --- !u!1 &4335064529616784176
 GameObject:
   m_ObjectHideFlags: 0
