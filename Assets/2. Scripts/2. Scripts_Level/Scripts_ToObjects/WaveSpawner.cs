@@ -98,8 +98,9 @@ public class WaveSpawner : MonoBehaviour {
 		if (nextWave + 1 > waves.Length - 1)
 		{
 			nextWave = 0;
-			SceneManager.LoadScene("Escape");
+			Interlude.InterludeManager.KeyFound();
 			Debug.Log("ALL WAVES COMPLETE! You Win!");
+			Time.timeScale = 0;
 		}
 		else
 		{
