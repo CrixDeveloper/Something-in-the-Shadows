@@ -2665,8 +2665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -179, y: 76}
-  m_SizeDelta: {x: 308.0287, y: 46.786743}
+  m_AnchoredPosition: {x: -125.51538, y: 126.033966}
+  m_SizeDelta: {x: 414.9978, y: 146.8547}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &399177474
 MonoBehaviour:
@@ -2690,12 +2690,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d7c5435c2ff034b4da6f334fc48d9019, type: 3}
-    m_FontSize: 50
+    m_FontSize: 62
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 50
-    m_Alignment: 0
+    m_MaxSize: 62
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
@@ -7490,6 +7490,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b3248db90896a6f46a0cdb09d671a88f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 27a2e426a50f9f74faf91f6a4ad513b1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3248db90896a6f46a0cdb09d671a88f, type: 3}
 --- !u!1001 &1390235006
@@ -7677,7 +7681,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1393276918
 RectTransform:
   m_ObjectHideFlags: 0

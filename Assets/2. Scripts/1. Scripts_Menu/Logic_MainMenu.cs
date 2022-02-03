@@ -13,6 +13,12 @@ public class Logic_MainMenu : MonoBehaviour
     #endregion
 
     #region Methods to use:
+
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     public void PlayGame(string sceneName)
     {
         StartCoroutine(LoadAsynchronously(sceneName));
